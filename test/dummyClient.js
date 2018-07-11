@@ -1,4 +1,6 @@
-export default class DummyClient {
+class DummyClient {
+
+  constructor() {}
 
   getPlayer (name) {
     return {};
@@ -12,3 +14,5 @@ export default class DummyClient {
     return {};
   }
 }
+
+module.exports = DummyClient;

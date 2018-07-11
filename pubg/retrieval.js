@@ -1,5 +1,6 @@
 const pubg = require("pubg.js");
 const fs = require("fs");
+const winston = require('winston');
 
 class PubgData {
 
@@ -14,7 +15,7 @@ class PubgData {
       throw `No matches exist for player ${name}`;
     }
     const matchId = matches[0].id;
-    console.log(`Retrieving match with id ${matchId}`);
+    winston.info(`Retrieving match with id ${matchId}`);
     return await this.client.getMatch(matchId);
   }
 

@@ -54,16 +54,16 @@ const pickupSpawnedEvent = {
   "_T": "LogItemPickup"
 }
 
-describe("Retrieval", function () {
+describe.skip("Retrieval", function () {
   const retrieval = new PubgData(new DummyClient());
-  const telemetry = JSON.parse(fs.readFileSync("telemtry-7-3-18.json"));
+  const telemetry = JSON.parse(fs.readFileSync("reference/telemetry-7-3-18.json"));
 
-  describe("item was dropped", function () {
+  it("item was dropped", function () {
     const dropped = retrieval.wasItemDropped(telemetry, pickupDroppedEvent);
     assert.ok(dropped);
   });
 
-  describe("item was spawned", function() {
+  it("item was spawned", function() {
     const dropped = retrieval.wasItemDropped(telemetry, pickupSpawnedEvent);
     assert.ok(!dropped);
   });

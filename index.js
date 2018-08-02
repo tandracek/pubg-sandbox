@@ -41,8 +41,8 @@ const getWeaponsFromFile = (fromFilename, toFilename) => {
 
 const weapons = JSON.parse(fs.readFileSync("reference/weapons-7-3-18.json"));
 Overlay.init("miramar_map.jpeg").then(overlay => {
-  overlay.addCoordinates(weapons, Overlay.RED, 2);
-  overlay.mergeAndWrite("mapped_miramar.png");
+  overlay.addTelemetryCoordinates(weapons, Overlay.RED, 2);
+  overlay.write("mapped_miramar.png");
 }).catch(err => {
   console.log(err);
 });

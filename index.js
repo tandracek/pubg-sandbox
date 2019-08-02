@@ -6,7 +6,7 @@ const winston = require('winston');
 
 winston.add(new winston.transports.Console());
 
-const apiKey = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI2MTY4NjA3MC00YTgzLTAxMzYtNDBlMi0zNWY1ZjZhMzEzYTIiLCJpc3MiOiJnYW1lbG9ja2VyIiwiaWF0IjoxNTI4MTU3Njg3LCJwdWIiOiJibHVlaG9sZSIsInRpdGxlIjoicHViZyIsImFwcCI6InB1YmctYW5hbHl6ZXItYjU0ZGJhNDMtMjE1Ni00NTM1LWIzZjEtMGUyZDNlZTQyN2FiIn0.9Xch7ioQF8Yy_hIS8Dxm9dj_OdNXNREJ6j2MANC75_k";
+const apiKey = "";
 const retrieval = new PubgData(new ApiClient(apiKey));
 
 const writeLatest = () => {
